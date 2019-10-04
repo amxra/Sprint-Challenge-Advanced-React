@@ -1,19 +1,16 @@
-import React from "react";
+import React from 'react';
 
-
-class Player extend React.Component {
-    render (){
-        const {player} = this.PaymentResponse;
-
-        return(){
-            <div className = "player">
-                <h2>{player.name}</h2>
+class Player extends React.Component {
+    render(){
+        const {player} = this.props;
+        return(
+            <div>
+                <h3>{player.name}</h3>
                 <p>{"Country: " + player.country}</p>
                 <p>{"Searches: " + player.searches}</p>
-
             </div>
-        }
+        )
     }
 }
 
-export default Player;
+export default Player; 

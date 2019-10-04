@@ -1,17 +1,16 @@
-import React from "react";
-import axios from "axios";
+import React from 'react';
+import axios from 'axios';
 import Player from './Player';
 
-
 class Players extends React.Component {
-    constructor (props){
+    constructor(props){
         super(props);
         this.state = {
-            Players: []
+            players: []
         }
     }
 
-    componentDidMount (){
+    componentDidMount(){
         axios.get('http://localhost:5000/api/players')
         .then(response => {
             this.setState({
@@ -20,16 +19,15 @@ class Players extends React.Component {
         })
     }
 
-    render (){
-        return (
+    render(){
+        return(
             <div>
                 {this.state.players? this.state.players.map(player => (
-                    <Player player = {player}/>
-                )): null}
+                    <Player player={player}/>
+                )): null }
             </div>
         )
     }
 }
 
-
-export default Players;
+export default Players; 
