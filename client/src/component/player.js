@@ -5,7 +5,7 @@ class Player extends React.Component {
         const {player} = this.props;
         return(
             <div>
-                <h3>{player.name}</h3>
+                <h2>{player.name}</h2>
                 <p>{"Country: " + player.country}</p>
                 <p>{"Searches: " + player.searches}</p>
             </div>
