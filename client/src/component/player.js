@@ -4,13 +4,13 @@ class Player extends React.Component {
     render(){
         const {player} = this.props;
         return(
-            <div>
-                <h2>{player.name}</h2>
-                <p>{"Country: " + player.country}</p>
-                <p>{"Searches: " + player.searches}</p>
+            <div className="player">
+                <h2>{<strong>Name</strong>}: {player.name}</h2>
+                <p>{<strong>Country</strong>}: {player.country}</p>
+                <p>{<strong>Searches</strong>}: {player.searches}</p>
             </div>
         )
     }
 }
 
-export default Player; 
+export default Player;

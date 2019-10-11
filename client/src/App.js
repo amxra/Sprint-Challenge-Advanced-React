@@ -1,18 +1,14 @@
-import React from 'react';
-import Players from './component/Players'
 import './App.css';
-import Navigation from "./component/navigation";
+import Players from './components/Players';
+import Navigation from './component/navigation';
 
-
-class App extends React.Component {
-
-  render(){
+function App() {
     return (
       <div className="App">
-        <Navigation/>
+        <Navbar />
         <Players />
       </div>
     );
-  }
 }
+
 export default App;

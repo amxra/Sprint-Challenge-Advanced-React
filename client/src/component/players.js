@@ -21,13 +21,13 @@ class Players extends React.Component {
 
     render(){
         return(
-            <div>
+            <div className='players'>
                 {this.state.players? this.state.players.map(player => (
-                    <Player player={player}/>
+                    <Player key={player.id} player={player}/>
                 )): null }
             </div>
         )
     }
 }
 
-export default Players; 
+export default Players;
