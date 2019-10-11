@@ -1,15 +1,14 @@
-import React, {useState} from 'react';
+import React from 'react';
 import useDarkMode from '../hooks/useDarkMode';
 
 const Navigation = () => {
-  // const [darkMode, setDarkMode] = useState(false);
   const [darkMode, setDarkMode] = useDarkMode(false)
   const toggleMode = e => {
     e.preventDefault();
     setDarkMode(!darkMode);
   };
   return (
-    <nav className="navigation">
+    <nav className="navbar">
       <h1>Women's World Cup</h1>
       <div className="dark-mode__toggle">
         <div
@@ -20,5 +19,6 @@ const Navigation = () => {
     </nav>
   );
 };
+
 
 export default Navigation;
